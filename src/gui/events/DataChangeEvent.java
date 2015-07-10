@@ -42,7 +42,7 @@ public class DataChangeEvent<T> extends EventObject {
 
         Set<ConstraintViolation<T>> constraintViolations = validator.validate(this.data);
         if (!constraintViolations.isEmpty()) {
-            throw new ConstraintViolationException(constraintViolations);
+            throw new ConstraintViolationException(null);
         }
     }
 
